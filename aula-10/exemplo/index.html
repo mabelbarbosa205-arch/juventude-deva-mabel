@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="submit" id="formulario">
+    <label for="nome">Digite seu nome!</label><br>
+    <input type="text"  id="nome"><br><br>
+    <label for="email">Digite seu e-mail!</label><br>
+    <input type="email" id="email"><br><br>
+    <label for="idade">Digite sua idade!</label><br>
+    <input type="idade" id="idade"><br><br>
+    <input type="submit" value="Enviar">
+   </form> 
+   <script>
+    const form = document.querySelector("#formulario")
+    form.addEventListener("submit",
+    function(event){
+        event.preventDefault()
+        const nome = document.querySelector("#nome").value
+        const email = document.querySelector("#email").value
+        const idade = document.querySelector("#idade").value
+        alert("Formulario preenchido com sucesso!" + nome + email + idade)
+        
+
+    }
+)
+   </script>
+</body>
+</html>
